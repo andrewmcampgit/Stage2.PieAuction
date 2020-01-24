@@ -6,6 +6,7 @@ using System.Web;
 namespace PieAuction.BackEnd.Models
 {
     public class AuctionUser
+
     {
         public Guid Id { get; set; }
         public string FirstName { get; set; }
