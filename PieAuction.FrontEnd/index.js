@@ -19,7 +19,16 @@ $(function () {
             alert("Ajax Failed. Is the backend running? Err:" + status)
         });;
     });
-
+    
+    //Hit Enter for Search bar
+    var input = document.getElementById("search-input");
+    input.addEventListener("keyup", function(event)
+    {
+        if (event.keyCode === 13){
+            event.preventDefault();
+            document.getElementById("search-btn").click();
+        }
+    });
     // Add click event to "Search" button
     $("#search-btn").click(runPieSearch);
 
@@ -141,4 +150,3 @@ function populateMadeByUi(users) {
         madeBySelect.append(newUserOption);
     }
 }
-
